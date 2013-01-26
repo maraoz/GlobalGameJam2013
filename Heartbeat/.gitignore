@@ -16,20 +16,20 @@ obj/
  
  
  
-/Heartbeat/Project.userprefs
-/Heartbeat/Assembly-CSharp.csproj
-/Heartbeat/Assembly-CSharp.pidb
-/Heartbeat/Assembly-CSharp-Editor.csproj
-/Heartbeat/Assembly-CSharp-Editor.pidb
-/Heartbeat/Assembly-CSharp-Editor-vs.csproj
-/Heartbeat/Assembly-CSharp-firstpass.csproj
-/Heartbeat/Assembly-CSharp-firstpass.pidb
-/Heartbeat/Assembly-CSharp-firstpass-vs.csproj
-/Heartbeat/Assembly-CSharp-vs.csproj
-/Heartbeat/Assembly-UnityScript-firstpass.pidb
-/Heartbeat/Assembly-UnityScript-firstpass.unityproj
-/Heartbeat/Assembly-UnityScript-firstpass-vs.unityproj
-/Heartbeat/Project.suo
+Project.userprefs
+Assembly-CSharp.csproj
+Assembly-CSharp.pidb
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp-Editor.pidb
+Assembly-CSharp-Editor-vs.csproj
+Assembly-CSharp-firstpass.csproj
+Assembly-CSharp-firstpass.pidb
+Assembly-CSharp-firstpass-vs.csproj
+Assembly-CSharp-vs.csproj
+Assembly-UnityScript-firstpass.pidb
+Assembly-UnityScript-firstpass.unityproj
+Assembly-UnityScript-firstpass-vs.unityproj
+Project.suo
 
 .DS_Store
 .AppleDouble
