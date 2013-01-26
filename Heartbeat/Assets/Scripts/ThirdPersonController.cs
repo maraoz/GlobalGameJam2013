@@ -119,9 +119,9 @@ public class ThirdPersonController : MonoBehaviour
 		{
 			if (Input.GetMouseButton (1))
 			{
-				float sidestep = Input.GetAxis ("Sidestep"), horizontal = Input.GetAxis ("Horizontal");
+				float horizontal = Input.GetAxis ("Horizontal");
 				
-				return Mathf.Abs (sidestep) > Mathf.Abs (horizontal) ? sidestep : horizontal;
+				return horizontal;
 			}
 			else
 			{
