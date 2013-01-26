@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FoodCollect : MonoBehaviour {
 
+    public Light glow;
     public CapsuleCollider capsuleCollider;
     public float growRate = 1.5f;
     private ParticleEmitter[] particles;
@@ -28,6 +29,7 @@ public class FoodCollect : MonoBehaviour {
         
         tpc.groundedDistance *= growRate;
         tpc.groundedCheckOffset *= growRate;
+        glow.intensity *= growRate;
         
         transform.localScale *= growRate;
         foreach (ParticleEmitter pe in particles) {
