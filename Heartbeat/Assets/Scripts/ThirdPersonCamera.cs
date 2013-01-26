@@ -158,6 +158,7 @@ public class ThirdPersonCamera : MonoBehaviour
 			maxDistance
 		);
 	}
+
 	
 
 	void LateUpdate ()

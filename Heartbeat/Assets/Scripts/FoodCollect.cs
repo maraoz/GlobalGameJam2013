@@ -30,6 +30,7 @@ public class FoodCollect : MonoBehaviour {
         tpc.groundedDistance *= growRate;
         tpc.groundedCheckOffset *= growRate;
         glow.intensity *= growRate;
+        glow.range *= growRate;
         
         transform.localScale *= growRate;
         foreach (ParticleEmitter pe in particles) {
