@@ -36,6 +36,7 @@ public class FoodCollect : MonoBehaviour {
     void GrowSize() {
         cam.MoveAway();
         con.speed *= (growRate - 1) / 4 + 1;
+        rigidbody.mass *= growRate;
 
         tpc.groundedDistance *= growRate;
         tpc.groundedCheckOffset *= growRate;
