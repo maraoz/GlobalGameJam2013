@@ -31,7 +31,7 @@ public class FoodCollect : MonoBehaviour {
             GrowStronger();
         } else if (collider.gameObject.tag == "Portal") {
             Destroy(collider.gameObject);
-            Application.LoadLevel("level2");
+            Application.LoadLevel(collider.gameObject.GetComponent<PortalScript>().nextNameLevel);
         }
     }
 
