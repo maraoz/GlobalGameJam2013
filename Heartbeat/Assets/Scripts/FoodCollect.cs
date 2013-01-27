@@ -4,6 +4,7 @@ using System.Collections;
 public class FoodCollect : MonoBehaviour {
 
     public ThirdPersonCamera cam;
+    public ThirdPersonController con;
     public Light glow;
     public CapsuleCollider capsuleCollider;
     public float growRate = 1.5f;
@@ -28,15 +29,14 @@ public class FoodCollect : MonoBehaviour {
 
 
     void GrowSize() {
-
-
         cam.MoveAway();
+        con.speed *= (growRate-1)/2+1;
 
         tpc.groundedDistance *= growRate;
         tpc.groundedCheckOffset *= growRate;
         glow.intensity *= growRate;
         glow.range *= growRate;
-        
+
         transform.localScale *= growRate;
         foreach (ParticleEmitter pe in particles) {
             pe.minSize *= growRate;
