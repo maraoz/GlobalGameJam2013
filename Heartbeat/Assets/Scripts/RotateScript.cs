@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class RotateScript : MonoBehaviour {
-    public Vector3 rotation;
+    public float speed = 0.1f;
 
     private Transform transf;
 
@@ -11,6 +11,8 @@ public class RotateScript : MonoBehaviour {
     }
 
     void Update() {
-        transf.Rotate(rotation);
+        Vector3 ea = transf.eulerAngles;
+        ea.y += speed;
+        transf.eulerAngles = ea;
     }
 }
