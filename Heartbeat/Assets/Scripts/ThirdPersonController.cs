@@ -29,7 +29,7 @@ public class ThirdPersonController : MonoBehaviour
 		groundDrag = 5.0f,
 		directionalJumpFactor = 0.7f;
 		// Tweak these to adjust behaviour relative to speed
-	private const float groundedDistance = 0.5f;
+	public float groundedDistance = 0.5f;
 		// Tweak if character lands too soon or gets stuck "in air" often
 		
 		
@@ -119,9 +119,9 @@ public class ThirdPersonController : MonoBehaviour
 		{
 			if (Input.GetMouseButton (1))
 			{
-				float sidestep = Input.GetAxis ("Sidestep"), horizontal = Input.GetAxis ("Horizontal");
+				float horizontal = Input.GetAxis ("Horizontal");
 				
-				return Mathf.Abs (sidestep) > Mathf.Abs (horizontal) ? sidestep : horizontal;
+				return horizontal;
 			}
 			else
 			{
