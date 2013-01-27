@@ -29,6 +29,9 @@ public class FoodCollect : MonoBehaviour {
         } else if (collider.gameObject.tag == "Defense") {
             Destroy(collider.gameObject);
             GrowStronger();
+        } else if (collider.gameObject.tag == "Portal") {
+            Destroy(collider.gameObject);
+            Application.LoadLevel("level2");
         }
     }
 
