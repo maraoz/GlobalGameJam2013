@@ -53,9 +53,15 @@ public class FoodCollect : MonoBehaviour {
         Color c = cover.renderer.material.color;
         c.a += growCover;
         if (c.a > 0.7f) {
-            c.a = 0.5f;
+            c.a = 0.7f;
         }
         cover.renderer.material.color = c;
+    }
+
+    public void Punch(Vector3 force) {
+        if (cover.renderer.material.color.a < 0.7f) {
+            rigidbody.AddForce(force);
+        }
     }
 
 }

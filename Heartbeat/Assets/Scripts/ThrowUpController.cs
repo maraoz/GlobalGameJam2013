@@ -12,10 +12,9 @@ public class ThrowUpController : MonoBehaviour {
     }
 
     void Update() {
-        Debug.Log(Vector2.Distance(transform.position, player.transform.position));
         if (Vector2.Distance(transform.position, player.transform.position) < distance) {
             player.rigidbody.velocity = Vector3.zero;
-            player.rigidbody.AddForce(Vector3.up * strength);
+            player.GetComponent<FoodCollect>().Punch(Vector3.up * strength);
             enabled = false;
             Destroy(gameObject.transform.parent.gameObject);
         }
