@@ -149,15 +149,13 @@ public class ThirdPersonCamera : MonoBehaviour
 	}
 	
 	
-	void Update ()
-	// Update optimal distance based on scroll wheel input
-	{
+    void MoveAway() {
 		optimalDistance = Mathf.Clamp (
-			optimalDistance + Input.GetAxis ("Mouse ScrollWheel") * -zoomSpeed * Time.deltaTime,
+			optimalDistance + -1 * -zoomSpeed * Time.deltaTime,
 			minDistance,
 			maxDistance
 		);
-	}
+    }
 
 	
 
