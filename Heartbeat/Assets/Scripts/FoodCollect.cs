@@ -3,6 +3,8 @@ using System.Collections;
 
 public class FoodCollect : MonoBehaviour {
 
+    public GameObject cover;
+    public float growCover = 0.1f;
     public ThirdPersonCamera cam;
     public ThirdPersonController con;
     public Light glow;
@@ -24,13 +26,16 @@ public class FoodCollect : MonoBehaviour {
         if (collider.gameObject.tag == "Food") {
             Destroy(collider.gameObject);
             GrowSize();
+        } else if (collider.gameObject.tag == "Defense") {
+            Destroy(collider.gameObject);
+            GrowStronger();
         }
     }
 
 
     void GrowSize() {
         cam.MoveAway();
-        con.speed *= (growRate-1)/4+1;
+        con.speed *= (growRate - 1) / 4 + 1;
 
         tpc.groundedDistance *= growRate;
         tpc.groundedCheckOffset *= growRate;
@@ -42,6 +47,15 @@ public class FoodCollect : MonoBehaviour {
             pe.minSize *= growRate;
             pe.maxSize *= growRate;
         }
+    }
+
+    void GrowStronger() {
+        Color c = cover.renderer.material.color;
+        c.a += growCover;
+        if (c.a > 0.7f) {
+            c.a = 0.5f;
+        }
+        cover.renderer.material.color = c;
     }
 
 }
